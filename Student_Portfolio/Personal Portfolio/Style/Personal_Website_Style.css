@@ -1,0 +1,261 @@
+/* body styling */
+body {
+    margin: 0%; /* this will make sure there is no margin around the body */
+}
+
+/* H1 styling */
+h1 {
+    text-transform: uppercase; /* Makes the text uppercase */
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;/* Sets the font for the heading */
+    text-align: center; /* Centers the heading text */
+    margin-top: 3%; /* Adds a top margin to the heading */
+    color: rgb(51, 38, 233);
+    font-size: 30px; /* Sets the font size for the heading */
+    text-shadow: #333 2px 2px 4px; /* Adds a shadow effect to the text */
+}
+
+h1:hover {
+    filter: grayscale(5%); /* Applies a grayscale filter on hover */
+    transform: scale(1.1); /* Slightly enlarges the heading on hover */
+    transition: transform 1s; /* Smooth transition for the hover effects */
+}
+.white-text {
+    color: white; /* Sets the text color to white */
+    
+    ;
+}
+
+/* Paragraph styling */
+p {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    text-align: justify; /* Justifies the text in paragraphs */
+    letter-spacing: 1px; /* Adds spacing between letters */
+    font-size: 18px; /* Sets the font size for paragraphs */
+    padding-left: 20px; /* Adds padding to the left of paragraphs */
+    padding-right: 20px; /* Adds padding to the right of paragraphs */
+}
+
+p:hover {
+    transform: scale(1.05); /* Slightly enlarges the paragraph text on hover */
+    transition: transform 1s; /* Smooth transition for the hover effects */
+}
+.center {
+    text-align: center; /* Centers the text within elements with the class 'center' */
+}
+
+.center:hover {
+    filter: grayscale(5%); /* Applies a grayscale filter on hover */
+    transform: scale(1.1); /* Slightly enlarges the text on hover */
+    transition: transform 1s; /* Smooth transition for the hover effects */
+}
+/* End of body styling */
+
+
+/* Navigation bar styling */
+.Navbar {
+    overflow: hidden; /* Ensures that the content is contained within the nav */
+    background-color: #7b6dcf; /* Dark background for the navigation bar */
+    position: fixed; /* Keeps the nav bar at the top of the page */
+    top: 0; /* Positions the nav bar at the top, ensuring no space */
+    width: 100%; /* Makes the nav bar span the full width of the viewport */
+    z-index: 1; /* Ensures the nav bar stays above other content */
+    -webkit-animation: moveNav 5s; /* Adds a smooth animation effect when the nav bar appears */
+    animation: moveNav 5s; /* Adds a smooth animation effect when the nav bar appears */
+}
+/* moveNav animation effect for moving the nav bar in from the left of the screen */
+@keyframes moveNav {
+    from {left: -100vw;} /* Starts the nav bar off-screen to the left */
+    to {left: 0vw;} /* Moves the nav bar into view */
+    
+}
+/* Styling for the links in the navigation bar */
+.Navbar a {
+    float: left; /* Aligns the links to the left side of the nav bar */
+    display: block; /* Ensures the links are block elements */
+    color: rgb(245, 245, 250); /* Sets the text color of the links to white */
+    padding: 14px 16px; /* Adds padding around the links for better spacing */
+    text-decoration: none; /* Removes the underline from the links */
+    font-family: AvantGarde, Helvetica; /* Sets the font for the links */
+    font-size: 20px; /* Sets the font size for the links */
+    text-align: center; /* Centers the text within the links */
+    position: relative; /* Allows for positioning of the links */
+    -webkit-animation: moveNavText 5.75s; /* Adds a smooth animation effect to the links */
+    animation: moveNavText 5.75s; /* Adds a smooth animation effect to the links */   
+}
+
+/* moveNavText animation effect for moving the navbar text from above the view to the navbar */
+@keyframes moveNavText {
+    from {top: -100vw;} /* Starts the text off-screen above */
+    to {top: 0vw;} /* Moves the text into view */
+}
+/* Screens 576px and smaller will display navbar links equally distributed  */
+@media screen and (max-width: 576px) {
+    .Navbar a{
+        width: 25%; /* On small screens, each link takes up 25% of the width */
+        font-size: 12px; /* Reduces the font size for better fit */
+    }
+    
+}
+/* Navbar hover effects */
+.Navbar a:hover {
+    background-color: rgb(83, 82, 86); /* Changes the background color on hover */
+    color: rgb(24, 23, 23); /* Changes the text color on hover */
+    font-weight: bold; /* Makes the text bold on hover */
+}
+/* Navbar Home Button */
+.Navbar a.active{
+    background-color: darkgray; /* Grey background for the home button */
+}
+
+/* End of navigation bar styling */
+
+/* Video styling */
+
+#Network_Energy_Video {
+    position: fixed; /* Keeps the video fixed in place */
+    right: 0; /* Positions the video to the right side of the screen */
+    bottom: 0; /* Positions the video at the bottom of the screen */
+    min-width: 100%; /* Ensures the video covers the full width of the viewport */
+    z-index: -1; /* Places the video behind other content */
+
+}
+
+@media screen and (max-width: 576px) {
+    #Network_Energy_Video {
+        display: none; /* Hides the video on small screens */
+    }
+    
+}
+.Video_Text {
+    background: rgba(0, 0, 0, 0.5); /* Semi-transparent black background for the text */
+    color: white; /* Sets the text color to white */
+    width: 100%; /* Makes the text container full width */
+    padding: 20px; /* Adds padding around the text */
+    position: relative; /* Allows for positioning of the text */
+    -webkit-animation: moveVideoText 5.75s; /* Adds a smooth animation effect to the text */
+    animation: moveVideoText 5.75s; /* Adds a smooth animation effect to the text */
+
+}
+
+
+@keyframes moveVideotext {
+    from {top: -100vw;} /* Starts the text off-screen above */
+    to {top: 0vw;} /* Moves the text into view at the center */
+}
+
+/* End of video styling  */
+
+/* Table styling */
+* {
+    box-sizing: border-box; /* Ensures padding and borders are included in the element's total width and height */
+}
+
+q {
+    font-style: italic; /* Italicizes the text within <q> tags */
+}
+.Column_1 {
+    float: left; /* Aligns the first column to the left */
+    width: 50%; /* Sets the width of the first column to 50% */
+    padding: 10%; /* Adds padding around the first column */
+    padding-top: 3px; /* Adds a top padding of 3px */
+    height: 400px; /* Sets a fixed height for the first column */
+    background-color: aliceblue; /* Sets a light blue background color for the first column */
+}
+@media screen and (max-width: 576px){
+    .Column_1 {
+        overflow: auto; /* Allows scrolling if content overflows on small screens */
+    }
+    
+}
+
+.Column_2 {
+    float: left; /* Aligns the second column to the left */
+    width: 50%; /* Sets the width of the second column to 50% */
+    padding: 10px; /* Adds padding around the second column */
+    padding-top: 1.9%; /* Adds a top padding of 1.9% */
+    height: 400px; /* Sets a fixed height for the second column */
+    background-color: #7b6dcf; /* Sets a light gray background color for the second column */
+    
+}
+
+.Column_tall {
+    padding-top: 3.5%; /* Adds a top padding of 3.5% */
+    height: 450px; /* Sets a fixed height for the tall column */
+}
+
+.Row:after {
+    content: ""; /* Ensures the row clears the footer allowing it to be displayed */
+    display: table; /* Makes the row behave like a block element */
+    clear: both; /* Clears the float, ensuring the row contains its floated children */
+}
+
+/* Image styling */
+img {
+    filter: grayscale(35%); /* Applies a grayscale filter to images */
+    border-radius: 10px; /* Rounds the corners of images */
+    max-width: 100%; /* Ensures images do not exceed the width of their container */
+    height: 340px; /* Sets a fixed height for images */
+    display: block; /* Makes images block elements */
+    margin-right: auto; /* Centers the image horizontally */
+    margin-left: auto; /* Centers the image horizontally */
+}
+img:hover {
+    filter: grayscale(5%); /* Removes the grayscale filter on hover */
+    transform: scale(1.1); /* Slightly enlarges the image on hover */
+    transition: transform 1s; /* Smooth transition for the hover effects */
+}
+
+/* Contact form styling */
+input[type="text"] {
+    width: 100%; /* Makes the text input take up the full width of its container */
+    padding: 12px; /* Adds padding inside the text input */
+    border: 1px solid #ccc; /* Adds a light gray border around the text input */
+    border-radius: 4px; /* Rounds the corners of the text input */
+    box-sizing: border-box; /* Ensures padding and borders are included in the element's total width and height */
+    margin-top: 6px; /* Adds a top margin to the text input */
+    margin-bottom: 16px; /* Adds a bottom margin to the text input */
+    resize: vertical; /* Allows the text input to be resized vertically */
+    font-family: perpetua, Rockwell Extra bold; /* Sets the font for the text input */
+}
+
+/* Hover effects for input boxes */
+input[type="text"]:hover {
+    box-shadow: #333 2px 2px 4px; /* Adds a shadow effect on hover */
+    transform: scale(1.05); /* Slightly enlarges the text input on hover */
+}
+
+/* Submit button */
+input[type=submit] {
+    background-color: black; /* Sets the background color of the submit button to black */
+    color: white; /* Sets the font color of the Submit button to white */
+    font-weight: bold; /* Makes the font of the submit button bold */
+    padding: 12px 20px; /* Adds padding to the submit button */
+    border: none; /* Removes the border from the submit button */
+    border-radius: 4px; /* Gives the submit button the same rounded corners as the text boxes */
+    cursor: pointer; /* Changes the cursor to pointer when over the submit button */
+    display: block; /* Allows the submit button to be centered */
+    margin-left: auto; /* In combination with "margin-right: auto" this will center the submit button */
+    margin-right: auto;
+    font-family: Perpetua, Rockwell Extra Bold;
+}
+
+
+/* Hover effect for submit button */
+input[type=submit]:hover {
+    background-color: white; /* Turns the background of the submit button white when the user hovers over it */
+    color: black; /* Turns the font black when hovered over */
+    transform: scale(1.5); /* Makes the button increase 1.5 times in size */
+    transition: transform 1.5s; /* Makes the transform effect last 1.5 seconds */
+}
+
+
+form {
+    border-radius: 5px; /* Rounds the corners of the form */
+    background-color: #f2f2f2; /* Sets a light gray background color for the form */
+    padding: 20px; /* Adds padding inside the form */
+    background-color: aliceblue; /* Sets a light blue background color for the form */
+}
+
+footer {
+    color: white; /* Sets the text color of the footer to white */
+}
